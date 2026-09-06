@@ -37,7 +37,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
 else:
-    data = pd.read_csv("dataset/social_media_data.csv")
+    data = pd.read_csv("social_media_data.csv")
 
 # Clean Data
 data = data.loc[:, ~data.columns.str.startswith("Unnamed")]
